@@ -16,3 +16,10 @@ body {
     background-color: black;
     color: white;
 }
+
+/* Quiz Buttons */
+#quizButtons button{
+    width: 180px;
+    height: 100px;
+    font-size: 30px;
+}
