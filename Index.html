@@ -13,14 +13,17 @@
         <input type="checkbox" onclick="myFunction()" id="darkModeButton">
     </header>
     
-    <main id="quiz">
-        <section id="quizQuestion">
+    <button id="startButton" onclick="startQuiz()">START</button>
 
+    <main id="quiz" class="hidden">
+        <section>
+            <h2 id="quizQuestion">Insert Question</h2>
+            <h3 id="quizScore"></h3>
         </section>
         
         <section id="quizButtons">
-            <button class="quizButton" id="sant">Sant</button>
-            <button class="quizButton" id="falskt">Falskt</button>
+            <button class="quizButton" id="sant" onclick="questionAnswer()">Sant</button>
+            <button class="quizButton" id="falskt" onclick="questionAnswer()">Falskt</button>
         </section>
     </main>
 

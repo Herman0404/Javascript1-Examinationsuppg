@@ -12,8 +12,17 @@ body {
     
 }
 
+.hidden {
+    display: none;
+}
+
 .dark-mode {
-    background-color: black;
+    background-color: #282828;
+    color: white;
+}
+
+.dark-mode #quizButtons button {
+    background-color: #3f3f3f;
     color: white;
 }
 
