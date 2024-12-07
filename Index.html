@@ -10,20 +10,21 @@
 <body>
     <header>
         <label for="darkModeButton">Dark Mode</label>
-        <input type="checkbox" onclick="myFunction()" id="darkModeButton">
+        <input type="checkbox" onclick="darkModeFunc()" id="darkModeButton">
     </header>
     
     <button id="startButton" onclick="startQuiz()">START</button>
 
     <main id="quiz" class="hidden">
         <section>
+            <h3 id="quizQNum"></h3>
             <h2 id="quizQuestion">Insert Question</h2>
             <h3 id="quizScore"></h3>
         </section>
         
         <section id="quizButtons">
-            <button class="quizButton" id="sant" onclick="questionAnswer()">Sant</button>
-            <button class="quizButton" id="falskt" onclick="questionAnswer()">Falskt</button>
+            <button class="quizButton" id="sant" onclick="qTrue()">Sant</button>
+            <button class="quizButton" id="falskt" onclick="qFalse()">Falskt</button>
         </section>
     </main>
 
