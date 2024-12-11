@@ -38,6 +38,28 @@ header{
     font-weight: bold;
 }
 
+/*Correct / Incorrect / Empty answers*/
+
+.correct {
+    background-color: #4CAF50; 
+    color: white;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.incorrect {
+    background-color: #F44336;
+    color: white;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.unanswered {
+    border: 2px solid red; 
+    padding: 10px;
+    background-color: #f8d7da; 
+}
+
 /*Dark Mode Changes*/
 
 .dark-mode {
@@ -52,4 +74,16 @@ header{
 
 .dark-mode #quiz div {
     border-color: #043500;
+}
+
+.dark-mode .correct {
+    background-color: #234b25;
+}
+
+.dark-mode .incorrect {
+    background-color: #240a0a;
+}
+
+.dark-mode .unanswered {
+    background-color: #361216;
 }
