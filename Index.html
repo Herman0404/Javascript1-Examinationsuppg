@@ -3,46 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quiz</title>
     <link rel="stylesheet" href="style.css">
     <script src="js.js"></script>
 </head>
 <body>
     <header>
-        <label for="darkModeButton">Dark Mode</label>
-        <input type="checkbox" onclick="darkModeFunc()" id="darkModeButton">
+        <label for="dMode">Dark Mode</label>
+        <input type="checkbox" onclick="darkModeFunc()" id="dMode">
     </header>
     
-    <button id="startButton" onclick="startQuiz()">START</button>
+    
 
-    <main id="quiz" class="hidden">
-        <section>
-            <h3 id="quizQNum"></h3>
-            <h2 id="quizQuestion">Insert Question</h2>
-            <h3 id="quizScore"></h3>
-        </section>
-        
-        <section id="quizButtons">
-            <div id="ToF">
-                <button class="ToFButton" id="sant" onclick="qTrue()">Sant</button>
-                <button class="ToFButton" id="falskt" onclick="qFalse()">Falskt</button>
-            </div>
-            
-            <div class="4opt">
-                <button class="4optButton"></button>
-                <button class="4optButton"></button>
-                <button class="4optButton"></button>
-                <button class="4optButton"></button>
-            </div>
+    <main id="quiz">
+        <div class="ToF">
+            <h4>36*27=922</h4>
+            <label for="ToF-Ans-1">True</label>
+            <input type="radio" name="ToF-Ans-1" value="True">
+            <label for="ToF-Ans-1">False</label>
+            <input type="radio" name="ToF-Ans-1" value="False">
+        </div>
 
-            <div class="cBox">
-                <input type="checkbox" class="cBoxButton">
-                <input type="checkbox" class="cBoxButton">
-                <input type="checkbox" class="cBoxButton">
-                <input type="checkbox" class="cBoxButton">
-            </div>
+        <div class="ToF">
+            <h4>Om x är negativt är x^3 också negativt</h4>
+            <label for="ToF-Ans-2">True</label>
+            <input type="radio" name="ToF-Ans-2" value="True">
+            <label for="ToF-Ans-2">False</label>
+            <input type="radio" name="ToF-Ans-2" value="False">
+        </div>
             
-        </section>
+        <div class="4opt">
+            <h4>Vilket alternativ är x i x^2 = -4</h4>
+            <label for="4opt-Ans-1">2i</label>
+            <input type="radio" name="4opt-Ans-1" value="2i">
+            <label for="4opt-Ans-1">2</label>
+            <input type="radio" name="4opt-Ans-1" value="2">
+            <label for="4opt-Ans-1">-2</label>
+            <input type="radio" name="4opt-Ans-1" value="-2">
+            <label for="4opt-Ans-1">0.25</label>
+            <input type="radio" name="4opt-Ans-1" value="0.25">
+        </div>
+
+        <div class="cBox">
+            <h4>Vilket/Vilka x passar om x^2 = 1</h4>
+            <label for="cBox-Ans-1">1</label>
+            <input type="checkbox" name="cBox-Ans-1" value="1">
+            <label for="cBox-Ans-1">0</label>
+            <input type="checkbox" name="cBox-Ans-1" value="0">
+            <label for="cBox-Ans-1">-1</label>
+            <input type="checkbox" name="cBox-Ans-1" value="-1">
+            <label for="cBox-Ans-1">10</label>
+            <input type="checkbox" name="cBox-Ans-1" value="10">
+        </div>
+
+        <div class="ToF">
+            <h4>a^2 + b^2 = c^2</h4>
+            <label for="ToF-Ans-3">True</label>
+            <input type="radio" name="ToF-Ans-3" value="True">
+            <label for="ToF-Ans-3">False</label>
+            <input type="radio" name="ToF-Ans-3" value="False">
+        </div>
+
+        <div class="cBox">
+            <h4>Vilket/Vilka x passar om 1/x > x</h4>
+            <label for="cBox-Ans-2">2</label>
+            <input type="checkbox" name="cBox-Ans-2" value="2">
+            <label for="cBox-Ans-2">0.5</label>
+            <input type="checkbox" name="cBox-Ans-2" value="0.5">
+            <label for="cBox-Ans-2">-2</label>
+            <input type="checkbox" name="cBox-Ans-2" value="-2">
+            <label for="cBox-Ans-2">-0.5</label>
+            <input type="checkbox" name="cBox-Ans-2" value="-0.5">
+        </div>
+
+        <div class="ToF">
+            <h4>7i är ett reellt tal</h4>
+            <label for="ToF-Ans-4">True</label>
+            <input type="radio" name="ToF-Ans-4" value="True">
+            <label for="ToF-Ans-4">False</label>
+            <input type="radio" name="ToF-Ans-4" value="False">
+        </div>
+
+        <div class="4opt">
+            <h4>Vilket x passar om x-2 > 0</h4>
+            <label for="4opt-Ans-2">-3</label>
+            <input type="radio" name="4opt-Ans-2" value="-3">
+            <label for="4opt-Ans-2">1</label>
+            <input type="radio" name="4opt-Ans-2" value="1">
+            <label for="4opt-Ans-2">-7</label>
+            <input type="radio" name="4opt-Ans-2" value="-7">
+            <label for="4opt-Ans-2">9/4</label>
+            <input type="radio" name="4opt-Ans-2" value="9/4">
+        </div>
+
+        <div class="4opt">
+            <h4>Vilket x passar om x-2 = 2-x</h4>
+            <label for="4opt-Ans-3">1</label>
+            <input type="radio" name="4opt-Ans-3" value="1">
+            <label for="4opt-Ans-3">-1</label>
+            <input type="radio" name="4opt-Ans-3" value="-1">
+            <label for="4opt-Ans-3">-0.5</label>
+            <input type="radio" name="4opt-Ans-3" value="-0.5">
+            <label for="4opt-Ans-3">2</label>
+            <input type="radio" name="4opt-Ans-3" value="2">
+        </div>
+
+        <div class="cBox">
+            <h4>Vilket/Vilka x passar om x(x+1) = 6</h4>
+            <label for="cBox-Ans-3">2</label>
+            <input type="checkbox" name="cBox-Ans-3" value="2">
+            <label for="cBox-Ans-3">-2</label>
+            <input type="checkbox" name="cBox-Ans-3" value="-2">
+            <label for="cBox-Ans-3">3</label>
+            <input type="checkbox" name="cBox-Ans-3" value="3">
+            <label for="cBox-Ans-3">-3</label>
+            <input type="checkbox" name="cBox-Ans-3" value="-3">
+        </div>
+
+        <div class="cBox">
+            <h4>Vilket/Vilka x passar om x(x-1) = 2</h4>
+            <label for="cBox-Ans-4">2</label>
+            <input type="checkbox" name="cBox-Ans-4" value="2">
+            <label for="cBox-Ans-4">-2</label>
+            <input type="checkbox" name="cBox-Ans-4" value="-2">
+            <label for="cBox-Ans-4">3</label>
+            <input type="checkbox" name="cBox-Ans-4" value="3">
+            <label for="cBox-Ans-4">-1</label>
+            <input type="checkbox" name="cBox-Ans-4" value="-1">
+        </div>
+
+        <div class="4opt">
+            <h4>Vilket x passar om x^3 = 27 </h4>
+            <label for="4opt-Ans-4">2</label>
+            <input type="radio" name="4opt-Ans-4" value="2">
+            <label for="4opt-Ans-4">3</label>
+            <input type="radio" name="4opt-Ans-4" value="3">
+            <label for="4opt-Ans-4">7</label>
+            <input type="radio" name="4opt-Ans-4" value="7">
+            <label for="4opt-Ans-4">-3</label>
+            <input type="radio" name="4opt-Ans-4" value="-3">
+        </div>
+
+        <button onclick="submit()">Submit</button>
     </main>
 
     
