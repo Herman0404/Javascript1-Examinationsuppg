@@ -1,9 +1,3 @@
-
-
-const optAns = [
-    "2i", "9/4", "2", "3"
-]
-
 const cBoxAns = [
     ["1","-1"],
     ["0.5", "-2"],
@@ -11,43 +5,65 @@ const cBoxAns = [
     ["2","-1"]
 ]
 
+let points = 0;
+
 function submit(){
-    ToFCheck();
     disableInputs();
+    ToFCheck();
+    multiOptsCheck();
+    console.log(points);
 }
 
 function ToFCheck() {
     const ToFanswers = []; // Användarens svar
-    const ToFAns = ["False", "True", "True", "False"]; // Facit array
+    const ToFAns = ["False", "True", "True", "False"]; // Facit 
 
     const questions = document.querySelectorAll(".ToF"); // Query för alla frågor
 
+    radioButtonCheck(ToFanswers, ToFAns, questions);
+}
+
+function multiOptsCheck() {
+    const optAnswers = []; // Användarens svar
+    const optAns = ["2i", "9/4", "2", "3"];
+    
+
+    const questions = document.querySelectorAll(".multiOpt"); // Query för alla frågor
+
+    radioButtonCheck(optAnswers, optAns, questions);
+}
+
+
+
+function radioButtonCheck(userAns, Facit, questions){
     questions.forEach((question, id) => {
         const checked = question.querySelector("input:checked"); // Ta valda radioknappen
         if (checked) {
-            ToFanswers.push(checked.value); // Spara valda värdet
+            userAns.push(checked.value); // Spara valda värdet
         } else {
-            ToFanswers.push("Null"); // Vid inget svar, ge null
+            userAns.push("Null"); // Vid inget svar, ge null
             question.classList.add("unanswered"); // Markera frågan som obesvarad med klassen "unanswered"
         }
 
         const labels = question.querySelectorAll("label"); // Spara alla labels inom div som söks
 
         
-        if (ToFanswers[id] === ToFAns[id]) { // Kolla om svar matchar facit
+        if (userAns[id] === Facit[id]) { // Kolla om svar matchar facit
 
             // Vid rätt, ge label som tillhör valda svaret klassen "correct"
             labels.forEach(label => {
-                if (label.previousElementSibling.value === ToFanswers[id]) {
+                if (label.previousElementSibling.value === userAns[id]) {
                     label.classList.add("correct");
                 }
             });
 
-        } else if (ToFanswers[id] !== "Null") { // Koll om svar inte är "Null" (i andra ord ifall frågan besvarats men ändå blev fel)
+            points++; // Lägg även till poäng till summan
+
+        } else if (userAns[id] !== "Null") { // Koll om svar inte är "Null" (i andra ord ifall frågan besvarats men ändå blev fel)
 
             // Vid fel (inte tomt), ge label som tillhör valda svaret klassen "incorrect"
             labels.forEach(label => {
-                if (label.previousElementSibling.value === ToFanswers[id]) {
+                if (label.previousElementSibling.value === userAns[id]) {
                     label.classList.add("incorrect");
                 }
             });
