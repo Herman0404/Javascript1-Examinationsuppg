@@ -7,6 +7,7 @@ function submit(){
     score = multiOptsCheck(score);
     score = cBoxCheck(score);
     showScore(score, maxScore);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 // RADIOBUTTONS
