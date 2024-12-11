@@ -13,6 +13,7 @@ const cBoxAns = [
 
 function submit(){
     ToFCheck();
+    disableInputs();
 }
 
 function ToFCheck() {
@@ -55,6 +56,15 @@ function ToFCheck() {
 }
 
 
+function disableInputs() {
+
+    const inputs = document.querySelectorAll("input[type='radio'], input[type='checkbox']"); // Spara typer av inputs
+    
+    // Stäng av inputs med en loop
+    inputs.forEach(input => { 
+        input.disabled = true;
+    });
+}
 
 function darkModeFunc() {
     var element = document.body;
