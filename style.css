@@ -54,7 +54,7 @@ header{
     padding: 5px;
 }
 
-.unanswered {
+.empty {
     border: 2px solid red; 
     padding: 10px;
     background-color: #f8d7da; 
@@ -84,6 +84,6 @@ header{
     background-color: #240a0a;
 }
 
-.dark-mode .unanswered {
+.dark-mode .empty {
     background-color: #361216;
 }
